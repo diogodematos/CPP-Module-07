@@ -6,7 +6,7 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:05:43 by dcarrilh          #+#    #+#             */
-/*   Updated: 2024/09/17 14:58:55 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:02:37 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ template <typename T> T* Array<T>::getptr()
     return (_ptr);
 }
 
-template <typename T> T* Array<T>::size()
+template <typename T> T* Array<T>::size() const
 {
     return _size;
 }
