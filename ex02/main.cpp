@@ -6,21 +6,9 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:12:00 by dcarrilh          #+#    #+#             */
-/*   Updated: 2024/09/05 15:59:37 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2024/09/17 14:52:50 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Array.hpp"
-
-// int main()
-// {
-//     unsigned int a;
-//     a = 5;
-//     Array<unsigned int> Arr(a);
-//     Array<unsigned int> True(Arr);
-//     Array<unsigned int> Tre = Arr;
-//     return (0);
-// }
 
 #include "Array.hpp"
 
@@ -36,7 +24,6 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
-    //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
@@ -52,8 +39,7 @@ int main(int, char**)
     }
     try
     {
-        std::cout << "Hello!!" << std::endl;
-        numbers[1] = 0;
+        numbers[-2] = 0;
     }
     catch(const std::exception& e)
     {
@@ -61,20 +47,19 @@ int main(int, char**)
     }
     try
     {
-        std::cout << "How are you??" << std::endl;
-        numbers[5] = 0;
+        numbers[MAX_VAL - 1] = 0;
+        std::cout << numbers[MAX_VAL - 1] << std::endl;
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-    std::cout << "Porto??" << std::endl;
+
     for (int i = 0; i < MAX_VAL; i++)
     {
-        //std::cout << "Bye??" << std::endl;
         numbers[i] = rand();
     }
-    delete [] numbers.getptr();
-    delete [] mirror;//
+    delete []numbers.getptr();
+    delete [] mirror;
     return 0;
 }

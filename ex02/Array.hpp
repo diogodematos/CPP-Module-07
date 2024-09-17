@@ -6,7 +6,7 @@
 /*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 15:56:37 by dcarrilh          #+#    #+#             */
-/*   Updated: 2024/09/05 15:59:10 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2024/09/17 14:57:06 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ template<typename T> class Array
 
         int& operator[](int);
         T* getptr();
+        T* size();
 };
 
 #include "Array.tpp"
